@@ -11,6 +11,8 @@
 
 **A modern, responsive e-commerce platform specializing in luxury lingerie and women's intimate apparel.**
 
+🌐 **[Live Demo](https://lingerie-e-commerce.vercel.app/)**
+
 [Features](#-features) • [Tech Stack](#-tech-stack) • [Getting Started](#-getting-started) • [Project Structure](#-project-structure) • [API Documentation](#-api-documentation) • [Contributing](#-contributing)
 
 </div>

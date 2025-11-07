@@ -3,7 +3,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { Star } from 'lucide-react';
-import { products } from '@/app/api/products/route';
+import { products } from '@/lib/data/products';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 

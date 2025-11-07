@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "description": "Premium lingerie e-commerce site",
   "scripts": {
-    "dev": "node server.js",
+    "dev": "next dev",
     "build": "next build",
-    "start": "NODE_ENV=production node server.js",
+    "start": "next start",
     "lint": "next lint",
     "type-check": "tsc --noEmit"
   },

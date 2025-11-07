@@ -1,5 +1,10 @@
 import { NextResponse } from 'next/server';
 
+export async function GET(request: Request) {
+  return NextResponse.json(customers);
+}
+
+// Define the Customer type for route handler
 interface Customer {
   id: string;
   name: string;
@@ -12,7 +17,7 @@ interface Customer {
 }
 
 // In-memory store for customers (replace with database in production)
-export const customers: Customer[] = [
+const customers: Customer[] = [
   {
     id: '1',
     name: 'Jane Smith',
@@ -43,6 +48,4 @@ export const customers: Customer[] = [
   }
 ];
 
-export async function GET() {
-  return NextResponse.json(customers);
-} 
+

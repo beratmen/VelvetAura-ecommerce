@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server';
 import { unlink } from 'fs/promises';
 import { join } from 'path';
-import { products } from '../route';
+import { products } from '@/lib/data/products';
 
 export async function GET(
   request: Request,

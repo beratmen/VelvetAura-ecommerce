@@ -5,7 +5,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { ArrowRight, Heart, Star, Gift, Truck, CreditCard } from 'lucide-react';
 import Navbar from '@/components/layout/Navbar';
-import { products } from '@/app/api/products/route';
+import { products } from '@/lib/data/products';
 
 interface Product {
   id: string;
@@ -103,37 +103,39 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Hero Section */}
-      <section className="relative h-[80vh] bg-gray-900">
+      {/* Hero Section — modernized */}
+      <section className="relative h-[70vh] bg-gray-900">
         <Image
           src="/images/hero.jpg"
           alt="Hero"
           fill
-          className="object-cover opacity-90"
+          className="object-cover brightness-75"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-black/50 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/30 to-transparent" />
         <div className="absolute inset-0 flex items-center">
           <div className="max-w-7xl mx-auto px-4 w-full">
-            <div className="max-w-lg">
-              <h1 className="text-5xl md:text-7xl font-bold mb-6 text-white leading-tight">
-                Spring Romance Collection
-              </h1>
-              <p className="text-xl md:text-2xl mb-8 text-white/90">
-                Discover our most romantic collection yet, featuring delicate laces and luxurious silks.
-              </p>
-              <div className="space-x-4">
-                <Link
-                  href="/category/new-arrivals"
-                  className="inline-block bg-pink-600 text-white px-8 py-4 rounded-full hover:bg-pink-700 transition-colors text-lg font-medium"
-                >
-                  Shop New Arrivals
-                </Link>
-                <Link
-                  href="/category/sets"
-                  className="inline-block bg-white text-pink-600 px-8 py-4 rounded-full hover:bg-gray-100 transition-colors text-lg font-medium"
-                >
-                  Shop Sets
-                </Link>
+            <div className="mx-auto max-w-3xl">
+              <div className="backdrop-blur-sm bg-white/6 border border-white/10 rounded-2xl p-8 md:p-12 shadow-2xl">
+                <h1 className="text-4xl md:text-6xl font-extrabold mb-4 text-white leading-tight drop-shadow-md">
+                  Spring Romance Collection
+                </h1>
+                <p className="text-lg md:text-xl mb-6 text-white/90">
+                  Delicate laces, soft silhouettes and elevated essentials — handcrafted for everyday romance.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
+                  <Link
+                    href="/category/new-arrivals"
+                    className="inline-flex items-center justify-center bg-gradient-to-r from-pink-500 to-pink-600 text-white px-6 py-3 rounded-full hover:scale-[1.02] transform transition shadow-lg font-semibold"
+                  >
+                    Shop New Arrivals
+                  </Link>
+                  <Link
+                    href="/category/sets"
+                    className="inline-flex items-center justify-center bg-white/90 text-pink-600 px-6 py-3 rounded-full hover:bg-white/100 transition font-medium"
+                  >
+                    Shop Sets
+                  </Link>
+                </div>
               </div>
             </div>
           </div>
@@ -173,32 +175,32 @@ export default function Home() {
           <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
             Explore our curated collection of premium lingerie, swimwear, and loungewear
           </p>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {[
-              { name: 'Bras', image: 'https://images.unsplash.com/photo-1620799140188-3b2a02fd9a77?w=800' },
-              { name: 'Panties', image: 'https://images.unsplash.com/photo-1566355801161-eb8dc16ea4dd?w=800' },
-              { name: 'Sets', image: 'https://images.unsplash.com/photo-1605100804763-247f67b3557e?w=800' },
-              { name: 'Swimwear', image: 'https://images.unsplash.com/photo-1570976447640-ac859083963f?w=800' },
-              { name: 'T-Shirts', image: 'https://images.unsplash.com/photo-1576566588028-4147f3842f27?w=800' },
-              { name: 'Loungewear', image: 'https://images.unsplash.com/photo-1573612664822-d7d347da7b80?w=800' },
-              { name: 'Sleepwear', image: 'https://images.unsplash.com/photo-1568252542512-9fe8fe9c87bb?w=800' },
-              { name: 'Accessories', image: 'https://images.unsplash.com/photo-1613521973937-dd9a162bb262?w=800' },
+              { name: 'Bras', image: '/images/categories/bras.jpg' },
+              { name: 'Panties', image: '/images/categories/panties.jpg' },
+              { name: 'Sets', image: '/images/categories/sets.jpg' },
+              { name: 'Swimwear', image: '/images/categories/clothing.jpg' },
+              { name: 'T-Shirts', image: '/images/categories/clothing.jpg' },
+              { name: 'Loungewear', image: '/images/categories/new-arrivals.jpg' },
+              { name: 'Sleepwear', image: '/images/categories/sleepwear.jpg' },
+              { name: 'Accessories', image: '/images/categories/accessories.jpg' },
             ].map((category) => (
               <Link
                 key={category.name}
                 href={`/category/${category.name.toLowerCase()}`}
-                className="group relative aspect-[4/5] overflow-hidden rounded-lg"
+                className="group relative aspect-[4/5] overflow-hidden rounded-2xl bg-white/5 hover:shadow-xl transition-shadow duration-300"
               >
                 <Image
                   src={category.image}
                   alt={category.name}
                   fill
-                  className="object-cover transition-transform duration-500 group-hover:scale-110"
+                  className="object-cover transition-transform duration-700 group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
-                <div className="absolute inset-x-0 bottom-0 p-4">
-                  <h3 className="text-xl font-semibold text-white mb-1">{category.name}</h3>
-                  <span className="text-sm text-white/90">Shop Now →</span>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-70" />
+                <div className="absolute inset-x-0 bottom-4 p-4">
+                  <span className="inline-block bg-white/10 text-white/90 px-3 py-1 rounded-full text-sm font-medium mb-2">{category.name}</span>
+                  <div className="text-white/90 text-sm">Discover →</div>
                 </div>
               </Link>
             ))}
@@ -217,9 +219,9 @@ export default function Home() {
           </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <Link href="/collection/spring-romance" className="group">
-              <div className="relative aspect-[3/4] rounded-lg overflow-hidden">
+              <div className="relative aspect-[3/4] rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow">
                 <Image
-                  src="https://images.unsplash.com/photo-1619784299133-f691ffaea42f?w=800"
+                  src="/images/categories/new-arrivals.jpg"
                   alt="Spring Romance"
                   fill
                   className="object-cover transition-transform duration-500 group-hover:scale-105"
@@ -235,9 +237,9 @@ export default function Home() {
               </div>
             </Link>
             <Link href="/collection/summer-essentials" className="group">
-              <div className="relative aspect-[3/4] rounded-lg overflow-hidden">
+              <div className="relative aspect-[3/4] rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow">
                 <Image
-                  src="https://images.unsplash.com/photo-1549298916-b41d501d3772?w=800"
+                  src="/images/categories/sets.jpg"
                   alt="Summer Essentials"
                   fill
                   className="object-cover transition-transform duration-500 group-hover:scale-105"
@@ -253,9 +255,9 @@ export default function Home() {
               </div>
             </Link>
             <Link href="/collection/lounge-and-sleep" className="group">
-              <div className="relative aspect-[3/4] rounded-lg overflow-hidden">
+              <div className="relative aspect-[3/4] rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow">
                 <Image
-                  src="https://images.unsplash.com/photo-1573612664822-d7d347da7b80?w=800"
+                  src="/images/categories/sleepwear.jpg"
                   alt="Lounge & Sleep"
                   fill
                   className="object-cover transition-transform duration-500 group-hover:scale-105"
@@ -295,28 +297,28 @@ export default function Home() {
                 id: '2',
                 name: 'Lace Balconette Bra',
                 price: 44.99,
-                imageUrl: 'https://images.unsplash.com/photo-1616530940355-351fabd9524b?w=800',
+                imageUrl: '/images/products/product-2.svg',
                 category: 'Bras'
               },
               {
                 id: '7',
                 name: 'Lace Bra and Panty Set',
                 price: 49.99,
-                imageUrl: 'https://images.unsplash.com/photo-1605100804763-247f67b3557e?w=800',
+                imageUrl: '/images/products/product-1.svg',
                 category: 'Sets'
               },
               {
                 id: '10',
                 name: 'Silk Pajama Set',
                 price: 89.99,
-                imageUrl: 'https://images.unsplash.com/photo-1573612664822-d7d347da7b80?w=800',
+                imageUrl: '/images/products/product-4.svg',
                 category: 'Sleepwear'
               },
               {
                 id: '14',
                 name: 'Oversized Comfort Hoodie',
                 price: 54.99,
-                imageUrl: 'https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=800',
+                imageUrl: '/images/products/product-1.svg',
                 category: 'Clothing'
               }
             ].map((product) => (
@@ -325,25 +327,32 @@ export default function Home() {
                 href={`/product/${product.id}`}
                 className="group"
               >
-                <div className="relative aspect-[3/4] mb-4 rounded-lg overflow-hidden">
-                  <Image
-                    src={product.imageUrl}
-                    alt={product.name}
-                    fill
-                    className="object-cover transition-transform duration-500 group-hover:scale-105"
-                  />
-                  <button 
-                    className="absolute top-4 right-4 p-2 rounded-full bg-white/90 hover:bg-white transition-colors"
-                    onClick={(e) => {
-                      e.preventDefault();
-                      // TODO: Add to wishlist functionality
-                    }}
-                  >
-                    <Heart className="h-5 w-5 text-pink-600" />
-                  </button>
+                <div className="relative bg-white rounded-2xl overflow-hidden shadow hover:shadow-2xl transition-transform transform group-hover:-translate-y-1">
+                  <div className="relative aspect-[3/4] w-full">
+                    <Image
+                      src={product.imageUrl}
+                      alt={product.name}
+                      fill
+                      className="object-cover"
+                    />
+                    <button 
+                      className="absolute top-3 right-3 p-2 rounded-full bg-white/95 hover:bg-white shadow-sm"
+                      onClick={(e) => {
+                        e.preventDefault();
+                        // TODO: Add to wishlist functionality
+                      }}
+                    >
+                      <Heart className="h-5 w-5 text-pink-600" />
+                    </button>
+                  </div>
+                  <div className="p-4">
+                    <h3 className="text-base font-semibold text-gray-900 mb-1 line-clamp-2">{product.name}</h3>
+                    <div className="flex items-center justify-between">
+                      <p className="text-lg font-bold text-pink-600">${product.price.toFixed(2)}</p>
+                      <span className="text-sm text-gray-500">{product.category}</span>
+                    </div>
+                  </div>
                 </div>
-                <h3 className="text-lg font-medium text-gray-900 mb-1">{product.name}</h3>
-                <p className="text-lg font-medium text-pink-600">${product.price.toFixed(2)}</p>
               </Link>
             ))}
           </div>

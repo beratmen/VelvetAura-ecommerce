@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server';
-import { products } from '../../route';
+import { products } from '@/lib/data/products';
 
 export async function PATCH(
   request: Request,
