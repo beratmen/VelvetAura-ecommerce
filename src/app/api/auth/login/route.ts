@@ -2,7 +2,7 @@ import { NextResponse } from 'next/server';
 import { cookies } from 'next/headers';
 
 const ADMIN_USERNAME = 'beratmen';
-const ADMIN_PASSWORD = '@Bm281109#';
+const ADMIN_PASSWORD = '@Bm091956#';
 
 export async function POST(request: Request) {
   try {

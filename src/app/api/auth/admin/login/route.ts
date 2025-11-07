@@ -3,7 +3,7 @@ import { cookies } from 'next/headers';
 
 const ADMIN_CREDENTIALS = {
   email: 'beratmen',
-  password: '@NB281109#'
+  password: '@Bm091956#'
 };
 
 export async function POST(request: Request) {
