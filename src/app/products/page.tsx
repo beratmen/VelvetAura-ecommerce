@@ -72,6 +72,8 @@ export default function ProductsPage() {
                     src={product.imageUrl}
                     alt={product.name}
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    priority
                     className="object-cover rounded-lg group-hover:opacity-75 transition-opacity"
                   />
                   <button 

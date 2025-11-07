@@ -15,6 +15,7 @@ const nextConfig = {
         pathname: '/**',
       }
     ],
+    unoptimized: true
   },
   output: 'standalone'
   // Next.js 14 doesn't support server config in next.config.js
