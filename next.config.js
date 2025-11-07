@@ -6,15 +6,8 @@ const nextConfig = {
       'images.pexels.com',
     ],
   },
-  // Enable hostname and port configuration for production
-  server: {
-    hostname: '0.0.0.0',
-    port: 8080
-  },
-  // Allow external connections
-  experimental: {
-    allowExternalDir: true,
-  },
+  // Note: Server configuration is handled in server.js, not in next.config.js
+  // Next.js 14 doesn't support server config in next.config.js
 }
 
 module.exports = nextConfig
