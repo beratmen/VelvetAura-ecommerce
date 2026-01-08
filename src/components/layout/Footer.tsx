@@ -10,7 +10,7 @@ export default function Footer() {
           <div>
             <h3 className="text-lg font-semibold text-gray-900 mb-4">About Us</h3>
             <p className="text-gray-600 text-sm">
-              Premium lingerie and sleepwear designed for comfort and confidence.
+              Velvet Aura - Premium lingerie and sleepwear designed for comfort and confidence.
             </p>
           </div>
           
@@ -95,7 +95,7 @@ export default function Footer() {
         
         <div className="border-t border-gray-200 mt-8 pt-8">
           <p className="text-center text-gray-500 text-sm">
-            © {new Date().getFullYear()} Lingerie Store. All rights reserved.
+            © {new Date().getFullYear()} Velvet Aura. All rights reserved.
           </p>
         </div>
       </div>

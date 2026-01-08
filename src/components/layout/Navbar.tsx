@@ -42,7 +42,7 @@ export default function Navbar() {
             {/* Logo */}
             <div className="ml-4 flex lg:ml-0">
               <Link href="/" className="flex items-center">
-                <span className="text-2xl font-semibold text-pink-600">Lingerie</span>
+                <span className="text-2xl font-semibold text-pink-600">Velvet Aura</span>
               </Link>
             </div>
 
