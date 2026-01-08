@@ -1,4 +1,4 @@
-# 👗 Lingerie E-Commerce Platform
+# 👗 Velvet Aura
 
 <div align="center">
 
@@ -9,7 +9,7 @@
 ![MongoDB](https://img.shields.io/badge/MongoDB-8.0-green?style=for-the-badge&logo=mongodb)
 ![License](https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge)
 
-**A modern, responsive e-commerce platform specializing in luxury lingerie and women's intimate apparel.**
+**Velvet Aura - A premium, responsive e-commerce platform specializing in luxury lingerie and women's intimate apparel.**
 
 🌐 **[Live Demo](https://lingerie-e-commerce.vercel.app/)**
 
@@ -82,31 +82,31 @@ This is a full-featured e-commerce platform built with modern web technologies, 
 
 ### Frontend
 
-| Technology | Version | Purpose | Link |
-|------------|---------|---------|------|
-| **Next.js** | 14.0.4 | React framework with SSR/SSG | [Documentation](https://nextjs.org/docs) |
-| **React** | 18.2.0 | UI library | [Documentation](https://react.dev) |
-| **TypeScript** | 5.3.3 | Type-safe JavaScript | [Documentation](https://www.typescriptlang.org/docs) |
-| **Tailwind CSS** | 3.4.0 | Utility-first CSS framework | [Documentation](https://tailwindcss.com/docs) |
-| **Headless UI** | 1.7.17 | Unstyled UI components | [Documentation](https://headlessui.com) |
-| **Lucide React** | 0.294.0 | Icon library | [Documentation](https://lucide.dev) |
+| Technology       | Version | Purpose                      | Link                                                 |
+| ---------------- | ------- | ---------------------------- | ---------------------------------------------------- |
+| **Next.js**      | 14.0.4  | React framework with SSR/SSG | [Documentation](https://nextjs.org/docs)             |
+| **React**        | 18.2.0  | UI library                   | [Documentation](https://react.dev)                   |
+| **TypeScript**   | 5.3.3   | Type-safe JavaScript         | [Documentation](https://www.typescriptlang.org/docs) |
+| **Tailwind CSS** | 3.4.0   | Utility-first CSS framework  | [Documentation](https://tailwindcss.com/docs)        |
+| **Headless UI**  | 1.7.17  | Unstyled UI components       | [Documentation](https://headlessui.com)              |
+| **Lucide React** | 0.294.0 | Icon library                 | [Documentation](https://lucide.dev)                  |
 
 ### Backend
 
-| Technology | Version | Purpose | Link |
-|------------|---------|---------|------|
-| **Node.js** | 20.10+ | JavaScript runtime | [Documentation](https://nodejs.org/docs) |
-| **Express** | 4.18.2 | Web server framework | [Documentation](https://expressjs.com) |
-| **MongoDB** | 8.0.3 | NoSQL database | [Documentation](https://www.mongodb.com/docs) |
-| **Mongoose** | 8.0.3 | MongoDB ODM | [Documentation](https://mongoosejs.com/docs) |
-| **bcrypt** | 5.1.1 | Password hashing | [Documentation](https://www.npmjs.com/package/bcrypt) |
-| **Multer** | 1.4.5 | File upload handling | [Documentation](https://github.com/expressjs/multer) |
+| Technology   | Version | Purpose              | Link                                                  |
+| ------------ | ------- | -------------------- | ----------------------------------------------------- |
+| **Node.js**  | 20.10+  | JavaScript runtime   | [Documentation](https://nodejs.org/docs)              |
+| **Express**  | 4.18.2  | Web server framework | [Documentation](https://expressjs.com)                |
+| **MongoDB**  | 8.0.3   | NoSQL database       | [Documentation](https://www.mongodb.com/docs)         |
+| **Mongoose** | 8.0.3   | MongoDB ODM          | [Documentation](https://mongoosejs.com/docs)          |
+| **bcrypt**   | 5.1.1   | Password hashing     | [Documentation](https://www.npmjs.com/package/bcrypt) |
+| **Multer**   | 1.4.5   | File upload handling | [Documentation](https://github.com/expressjs/multer)  |
 
 ### Development Tools
 
-| Technology | Version | Purpose | Link |
-|------------|---------|---------|------|
-| **PostCSS** | 8.4.32 | CSS processing | [Documentation](https://postcss.org) |
+| Technology       | Version | Purpose              | Link                                                     |
+| ---------------- | ------- | -------------------- | -------------------------------------------------------- |
+| **PostCSS**      | 8.4.32  | CSS processing       | [Documentation](https://postcss.org)                     |
 | **Autoprefixer** | 10.4.16 | CSS vendor prefixing | [Documentation](https://github.com/postcss/autoprefixer) |
 
 ---
@@ -246,12 +246,12 @@ Lingerie-e-commerce/
 
 Create a `.env` file in the root directory with the following variables:
 
-| Variable | Description | Example |
-|----------|-------------|---------|
-| `MONGODB_URI` | MongoDB connection string | `mongodb://localhost:27017/lingerie-store` |
-| `NODE_ENV` | Environment mode | `development` or `production` |
-| `PORT` | Server port (optional) | `8080` |
-| `HOSTNAME` | Server hostname (optional) | `0.0.0.0` |
+| Variable      | Description                | Example                                    |
+| ------------- | -------------------------- | ------------------------------------------ |
+| `MONGODB_URI` | MongoDB connection string  | `mongodb://localhost:27017/lingerie-store` |
+| `NODE_ENV`    | Environment mode           | `development` or `production`              |
+| `PORT`        | Server port (optional)     | `8080`                                     |
+| `HOSTNAME`    | Server hostname (optional) | `0.0.0.0`                                  |
 
 ---
 
@@ -260,9 +260,11 @@ Create a `.env` file in the root directory with the following variables:
 ### Authentication Endpoints
 
 #### `POST /api/auth/login`
+
 User login endpoint.
 
 **Request Body:**
+
 ```json
 {
   "email": "user@example.com",
@@ -271,6 +273,7 @@ User login endpoint.
 ```
 
 **Response:**
+
 ```json
 {
   "success": true,
@@ -283,9 +286,11 @@ User login endpoint.
 ```
 
 #### `GET /api/auth/session`
+
 Get current user session.
 
 **Response:**
+
 ```json
 {
   "user": {
@@ -297,9 +302,11 @@ Get current user session.
 ```
 
 #### `POST /api/auth/logout`
+
 Logout current user.
 
 **Response:**
+
 ```json
 {
   "success": true,
@@ -310,9 +317,11 @@ Logout current user.
 ### Product Endpoints
 
 #### `GET /api/products`
+
 Get all products.
 
 **Response:**
+
 ```json
 [
   {
@@ -329,20 +338,25 @@ Get all products.
 ```
 
 #### `POST /api/products`
+
 Create a new product (Admin only).
 
 #### `GET /api/products/[id]`
+
 Get product by ID.
 
 #### `PATCH /api/products/[id]/toggle-publish`
+
 Toggle product publish status (Admin only).
 
 ### Admin Endpoints
 
 #### `POST /api/auth/admin/login`
+
 Admin login endpoint.
 
 **Request Body:**
+
 ```json
 {
   "email": "admin@example.com",
@@ -354,12 +368,12 @@ Admin login endpoint.
 
 ## 📜 Scripts
 
-| Command | Description |
-|---------|-------------|
-| `npm run dev` | Start development server |
-| `npm run build` | Build for production |
-| `npm start` | Start production server |
-| `npm run lint` | Run ESLint |
+| Command              | Description                  |
+| -------------------- | ---------------------------- |
+| `npm run dev`        | Start development server     |
+| `npm run build`      | Build for production         |
+| `npm start`          | Start production server      |
+| `npm run lint`       | Run ESLint                   |
 | `npm run type-check` | Run TypeScript type checking |
 
 ---
@@ -385,6 +399,7 @@ The application can be deployed to any platform that supports Node.js:
 ### Environment Setup for Production
 
 Make sure to set:
+
 - `NODE_ENV=production`
 - Valid `MONGODB_URI` (use MongoDB Atlas for cloud hosting)
 - Secure session cookies (automatically enabled in production)

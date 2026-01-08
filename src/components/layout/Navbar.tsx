@@ -42,7 +42,7 @@ export default function Navbar() {
             {/* Logo */}
             <div className="ml-4 flex lg:ml-0">
               <Link href="/" className="flex items-center">
-                <span className="text-2xl font-semibold text-pink-600">Velvet Aura</span>
+                <span className="text-2xl font-bold font-serif text-primary-800">Velvet Aura</span>
               </Link>
             </div>
 
@@ -53,7 +53,7 @@ export default function Navbar() {
                   <Link
                     key={category.name}
                     href={category.href}
-                    className="flex items-center text-sm font-medium text-gray-700 hover:text-pink-600"
+                    className="flex items-center text-sm font-medium text-neutral-700 hover:text-primary-600"
                   >
                     {category.name}
                   </Link>
@@ -121,7 +121,7 @@ export default function Navbar() {
                     <li key={category.name}>
                       <Link
                         href={category.href}
-                        className="text-sm font-medium text-gray-900 hover:text-pink-600"
+                        className="text-sm font-medium text-neutral-900 hover:text-primary-600"
                         onClick={() => setIsMenuOpen(false)}
                       >
                         {category.name}
