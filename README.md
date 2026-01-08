@@ -142,9 +142,9 @@ Before you begin, ensure you have the following installed:
 
    ```env
    # MongoDB Connection
-   MONGODB_URI=mongodb://localhost:27017/lingerie-store
+   MONGODB_URI=mongodb://localhost:27017/velvet-aura
    # Or use MongoDB Atlas:
-   # MONGODB_URI=mongodb+srv://username:password@cluster.mongodb.net/lingerie-store
+   # MONGODB_URI=mongodb+srv://<username>:<password>@cluster.mongodb.net/velvet-aura
 
    # Node Environment
    NODE_ENV=development
@@ -246,12 +246,12 @@ Lingerie-e-commerce/
 
 Create a `.env` file in the root directory with the following variables:
 
-| Variable      | Description                | Example                                    |
-| ------------- | -------------------------- | ------------------------------------------ |
-| `MONGODB_URI` | MongoDB connection string  | `mongodb://localhost:27017/lingerie-store` |
-| `NODE_ENV`    | Environment mode           | `development` or `production`              |
-| `PORT`        | Server port (optional)     | `8080`                                     |
-| `HOSTNAME`    | Server hostname (optional) | `0.0.0.0`                                  |
+| Variable      | Description                | Example                                 |
+| ------------- | -------------------------- | --------------------------------------- |
+| `MONGODB_URI` | MongoDB connection string  | `mongodb://localhost:27017/velvet-aura` |
+| `NODE_ENV`    | Environment mode           | `development` or `production`           |
+| `PORT`        | Server port (optional)     | `8080`                                  |
+| `HOSTNAME`    | Server hostname (optional) | `0.0.0.0`                               |
 
 ---
 
