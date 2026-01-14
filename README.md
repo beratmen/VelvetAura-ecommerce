@@ -9,9 +9,9 @@
 ![MongoDB](https://img.shields.io/badge/MongoDB-8.0-green?style=for-the-badge&logo=mongodb)
 ![License](https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge)
 
-**Velvet Aura - A premium, responsive e-commerce platform specializing in luxury lingerie and women's intimate apparel.**
+**Velvet Aura - A premium, responsive e-commerce platform for boutiques and curated online stores.**
 
-🌐 **[Live Demo](https://lingerie-e-commerce.vercel.app/)**
+🌐 **Live Demo:** *(coming soon — replace with your deployment URL)*
 
 [Features](#-features) • [Tech Stack](#-tech-stack) • [Getting Started](#-getting-started) • [Project Structure](#-project-structure) • [API Documentation](#-api-documentation) • [Contributing](#-contributing)
 
@@ -126,8 +126,8 @@ Before you begin, ensure you have the following installed:
 1. **Clone the repository**
 
    ```bash
-   git clone https://github.com/beratmen/Lingerie-e-commerce.git
-   cd Lingerie-e-commerce
+   git clone https://github.com/beratmen/VelvetAura-ecommerce.git
+   cd VelvetAura-ecommerce
    ```
 
 2. **Install dependencies**
@@ -184,7 +184,7 @@ Before you begin, ensure you have the following installed:
 ## 📁 Project Structure
 
 ```
-Lingerie-e-commerce/
+VelvetAura-ecommerce/
 ├── 📂 config/
 │   └── database.js          # MongoDB connection configuration
 │
@@ -437,7 +437,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 **Berat MEN**
 
 - GitHub: [@beratmen](https://github.com/beratmen)
-- Repository: [Lingerie-e-commerce](https://github.com/beratmen/Lingerie-e-commerce)
+- Repository: [VelvetAura-ecommerce](https://github.com/beratmen/VelvetAura-ecommerce)
 
 ---
 
